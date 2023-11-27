@@ -9,9 +9,16 @@
 <div class="container">
     <div class="row">
         {% for teacher in teachers  %}
-            <div class="col-lg-2 img">
-                <img src="{% thumbnail teacher.avatar 180x180 %}">
-                <h1>{{ teacher.first_name }} {{teacher.last_name}}</h1>
+            <div class="col-6 col-lg-2 img">
+                <a href="{{ teacher.get_absolute_url }}">
+                    <img src="{% thumbnail teacher.avatar 180x180 %}">
+                    <h1>{{ teacher.first_name }} {{teacher.last_name}}</h1>
+                    <p>Profe de:
+                        {% for subject in teacher.subject.all %}
+                            {{ subject.name }}
+                        {% endfor %}
+                    </p>
+                </a>
             </div>
         {% endfor %}
     </div>

@@ -52,3 +52,7 @@ body {
 .img img {
     border-radius: 50%;
 }
+
+.img {
+    margin-bottom: 50px;
+}
