@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}OT 2023 | Prime{% endblock %}
+{% block css %}{% static "css/index.css" %}{% endblock %}
+
+{% block content %}
+<h1>Operacion triunfo 2023</h1>
+<div class="container info">
+    <div class="row">
+        <div class="col-lg-4 prime">
+            <a href="{% url "profesores:teacher_list" %}">
+                <img src="{% static "img/profes.jpg" %}">
+                <h2>PROFESORES</h2>
+            </a>
+        </div>
+        <div class="col-lg-4 prime">
+            <a href="">
+                <img src="{% static "img/concursantes.png" %}">
+                <h2>CONCURSANTES</h2>
+            </a>
+        </div>
+        <div class="col-lg-4 prime">
+            <a href="">
+                <img src="{% static "img/jurado.jpg" %}">
+                <h2>JURADO</h2>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% load thumbnail %}
+
+{% block title %}Profesores | OT2023{% endblock %}
+{% block css %}{% static "css/profes.css" %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for teacher in teachers  %}
+            <div class="col-lg-2 img">
+                <img src="{% thumbnail teacher.avatar 180x180 %}">
+                <h1>{{ teacher.first_name }} {{teacher.last_name}}</h1>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

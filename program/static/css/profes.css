@@ -1,0 +1,54 @@
+/* MAIN CSS */
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #151e3f, #1a1f40, #1f2041, #242242, #282343);
+    color: white;
+}
+
+
+/* HEADER CSS */
+.logo{
+    border-radius: 200px;
+    width: 75px;
+}
+
+.navbar {
+    height: 100px;
+    background: rgb(118,54,169) !important;
+    background: linear-gradient(153deg, rgba(118,54,169,1) 13%, rgba(49,82,215,1) 48%, rgba(20,32,85,1) 87%) !important; 
+}
+
+.sections a {
+    padding: 30px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-out;
+    padding-bottom: 10px;
+}
+
+.sections a:hover {
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.collapse form button {
+    background-color: #142055;
+    color: white;
+    border: 2px solid white;
+    transition: 0.4s ease;
+}
+
+.collapse form button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+
+.selected {
+    border-bottom: 2px solid black;
+}
+/* CONTENT */
+
+.img img {
+    border-radius: 50%;
+}
