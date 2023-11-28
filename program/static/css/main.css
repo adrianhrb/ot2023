@@ -1,4 +1,8 @@
 /* MAIN CSS */
+*{
+    font-family: 'Lato', sans-serif;
+}
+
 body {
     min-height: 100vh;
     background-image: linear-gradient(to bottom, #151e3f, #1a1f40, #1f2041, #242242, #282343);
@@ -59,6 +63,6 @@ footer {
     }
 
     .navbar {
-        height: 150px;
+        height: 10px;
     }
 }

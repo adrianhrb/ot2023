@@ -25,23 +25,13 @@
 
 .info a:hover {
     color: rgb(118,54,169);
-    filter: grayscale(0%);
+    filter: grayscale(100%);
+}
+
+.prime a img{
+    transition: 0.3s ease;
 }
 
 .prime a img:hover {
-    transform: scale(1.10);
-}
-
-footer {
-    height: 250px;
-}
-
-@media (max-width: 992px) {
-    footer {
-        height: 450px;
-    }
-
-    .navbar {
-        height: 170px;
-    }
+    transform: scale(1.07);
 }

@@ -47,6 +47,11 @@
     color: #1a98ff;
 }
 
+.teacherinfo {
+    font-size: large;
+    font-weight: bold;
+}
+
 @media (max-width: 1400px) {
     .col-sm-4 {
         margin-top: 100px;
