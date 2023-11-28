@@ -11,7 +11,10 @@ def teacher_list(request):
 def teacher_detail(request, teacher_slug):
     teacher = Teacher.objects.get(slug=teacher_slug)
     subjects = list(teacher.subject.all())
-    subjects = ",".join([subject.name for subject in subjects])
+    sub = ",".join([sub.name for sub in subjects])
+    sub_obj = subjects[0]
     return render(
-        request, 'detail.html', dict(teacher=teacher, subject=subjects, section='profesores')
+        request,
+        'detail.html',
+        dict(teacher=teacher, subject=sub, sub_obj=sub_obj, section='profesores'),
     )
