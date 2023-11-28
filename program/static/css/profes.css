@@ -1,31 +1,30 @@
 /* CONTENT */
-
 .img img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .img {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
-.img h2{
-    margin-top: 20px;
+.img h2 {
+  margin-top: 20px;
 }
 
 .img a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
-.img a img{
-    transition: 0.4s ease;
+.img a img {
+  transition: 0.4s ease;
 }
 
 .img a:hover {
-    filter: grayscale(100%);
-    color: #7636a9;
+  filter: grayscale(100%);
+  color: #7636a9;
 }
 
-.img a img:hover{
-    transform: scale(1.10);
+.img a img:hover {
+  transform: scale(1.1);
 }

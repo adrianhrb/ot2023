@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('jueces/', include('judge.urls', namespace='jueces')),
     path('profesores/', include('teacher.urls', namespace='profesores')),
+    path('concursantes/', include('competitor.urls', namespace='concursantes')),
     path('', include('program.urls')),
 ]
 
