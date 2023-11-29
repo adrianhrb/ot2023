@@ -3,22 +3,19 @@
 {% load thumbnail %}
 
 {% block title %}Concursantes | OT2023{% endblock %}
-{% block css %}{% static "css/concursantes.css" %}{% endblock %}
+{% block css %}{% static "css/concursante.css" %}{% endblock %}
 
 {% block content %}
 <div class="container">
-    <div class="row">
-        {% for teacher in teachers  %}
+    <div class="row text-center">
+        <h1>Concursantes:</h1>
+        {% for competitor in active_competitors  %}
             <div class="col-6 col-lg-3 img">
-                <a href="{{ teacher.get_absolute_url }}">
-                    <img src="{% thumbnail teacher.avatar 180x180 %}">
-                    <h2>{{ teacher.first_name|upper }} {{ teacher.last_name|upper }}</h2>
-                    <p>Profe de:
-                        {% for subject in teacher.subject.all %}
-                            {{ subject.name }}
-                        {% endfor %}
-                    </p>
+                <a href="{{ competitor.get_absolute_url }}">
+                    <img src="{% thumbnail competitor.avatar 180x180 %}">
+                    <h2>{{ competitor.first_name|upper }} {{ competitor.last_name|upper }}</h2>
                 </a>
+                <p>{{ competitor.get_years }} años</p>
             </div>
         {% endfor %}
     </div>

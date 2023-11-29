@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.db import models
 from django.urls import reverse
 
@@ -20,5 +22,14 @@ class Competitor(models.Model):
     def __str__(self) -> str:
         return f'{self.first_name} {self.last_name}'
 
+    def get_years(self):
+        today = datetime.today()
+        age = (
+            today.year
+            - self.birthdate.year
+            - ((today.month, today.day) < (self.birthdate.month, self.birthdate.day))
+        )
+        return age
+
     def get_absolute_url(self):
-        return reverse('competitor:competitor_list', args=[self.slug])
+        return reverse('concursantes:competitor_detail', args=[self.slug])
