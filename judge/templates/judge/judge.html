@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}OT 2023 | Prime{% endblock %}
+{% block css %}{% static "css/index.css" %}{% endblock %}
+
+{% block content %}
+<h1>OPERACIÓN TRIUNFO 2023</h1>
+<div class="container info">
+    <div class="row">
+        <div class="col-lg-5 prime">
+            <a href="{% url "jueces:list" %}">
+                <img src="{% static "img/judge.jpg" %}">
+                <h2>VER JURADO</h2>
+            </a>
+        </div>
+        <div class="col-lg-5 prime">
+            <a href="{% url "jueces:identification" %}">
+                <img src="{% static "img/prime.jpg" %}">
+                <h2>IDENTIFICARSE</h2>
+                <h5>Solo si se pertenece al jurado*</h5>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

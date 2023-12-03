@@ -1,37 +1,37 @@
 /* CONTENT */
 .main {
-    text-align: center;
+  text-align: center;
 }
 
 .prime img {
-    width: 400px;
+  width: 400px;
 }
 
 .info {
-    margin-top: 100px;
-    margin-bottom: 100px;
+  margin-top: 100px;
+  margin-bottom: 150px;
 }
 
 .info h2 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .info a {
-    text-decoration: none;
-    color: white;
-    transition: 0.3s ease;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease;
 }
 
 .info a:hover {
-    color: rgb(118,54,169);
-    filter: grayscale(100%);
+  color: rgb(118, 54, 169);
+  filter: grayscale(100%);
 }
 
-.prime a img{
-    transition: 0.3s ease;
+.prime a img {
+  transition: 0.3s ease;
 }
 
 .prime a img:hover {
-    transform: scale(1.07);
+  transform: scale(1.07);
 }
