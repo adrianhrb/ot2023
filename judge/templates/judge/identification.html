@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% load thumbnail %}
+
+{% block css %}{% static "css/judge.css" %}{% endblock %}
+
+{% block title %}Identificación | OT2023{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row text-center">
+      <h3>Puedes identificarte rellenano el siguiente formulario:</h3>
+      <div class="col-12">
+        <form method="post" class='idform'>
+          <img src="{% static "img/prime.png" %}" class="primelogo">
+          {{ form.as_p }}
+          {% csrf_token %}
+          <button type="submit">Identificarse</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+.idform {
+  background-color: #1a98ff;
+  height: 400px;
+  margin-top: 10px;
+  margin-bottom: 170px;
+}
+
+h3 {
+  margin-top: 150px;
+}
+
+.idform img {
+  margin-top: 70px;
+  width: 30%;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  color: #1a98ff;
+  background-color: rgba(0, 0, 0, 0.815);
+  transform: scale(1.02);
+}
