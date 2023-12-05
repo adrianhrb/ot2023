@@ -20,4 +20,19 @@
         {% endfor %}
     </div>
 </div>
+<div class="container">
+    <div class="row-center">
+        <h1>Concursantes eliminados:</h1>
+        {% for eliminated in eliminated_competitors  %}
+            <div class="col-6 col-lg-3 img">
+                <a href="{{ competitor.get_absolute_url }}">
+                    <img src="{% thumbnail eliminated.avatar 180x180 %}">
+                        <h2>{{ eliminated.first_name|upper }} {{ eliminated.last_name|upper }}</h2>
+                    </a>
+                    <p>{{ eliminated.get_years }} años</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

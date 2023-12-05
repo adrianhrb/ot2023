@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% load thumbnail %}
+
+{% block title %}Jueces | OT2023{% endblock %}
+{% block css %}{% static "css/jueces_list.css" %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row text-center">
+        <h1>Jueces:</h1>
+        {% for judge in judges  %}
+            <div class="col-6 col-lg-4 img">
+                <a href="{{ judge.get_absolute_url }}">
+                    <img src="{% thumbnail judge.avatar 180x180 %}">
+                    <h2>{{ judge.first_name|upper }} {{ judge.last_name|upper }}</h2>
+                </a>
+                <p>{{ judge.job }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

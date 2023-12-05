@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Judge(models.Model):
@@ -8,3 +9,9 @@ class Judge(models.Model):
     job = models.CharField(max_length=250)
     avatar = models.ImageField(upload_to='teacher')
     password = models.CharField(max_length=6)
+
+    def __str__(self) -> str:
+        return self.first_name
+
+    def get_absolute_url(self):
+        return reverse('jueces:detail', args=[self.slug])
