@@ -3,7 +3,10 @@
 {% block title %}Busqueda | OT2023{% endblock %}
 
 {% block content %}
-{% for competitor in competitors_title  %}
-    <h1> {{ competitor.first_name }}</h1>
+{% for competitor in music_styles  %}
+    <h1>{{ competitor.first_name }}</h1>
+    {% for music in competitor.music_style.all  %}
+    <h1>{{ music }}</h1>
+    {% endfor %}
 {% endfor %}
 {% endblock %}
