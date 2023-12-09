@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}Busqueda | OT2023{% endblock %}
+
+{% block content %}
+{% for competitor in competitors_title  %}
+    <h1> {{ competitor.first_name }}</h1>
+{% endfor %}
+{% endblock %}
