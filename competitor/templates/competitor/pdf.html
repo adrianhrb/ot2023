@@ -1,0 +1,10 @@
+<html>
+  <body>
+    <h1>Concursantes de OT2023 eliminados</h1>
+    <ul>
+      {% for competitor in competitors  %}
+        <li>{{ competitor.first_name }} ({{ competitor.get_years }} anyos)</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

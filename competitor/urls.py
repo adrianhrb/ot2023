@@ -7,4 +7,5 @@ app_name = 'concursantes'
 urlpatterns = [
     path('', views.competitors_list, name='competitors_list'),
     path('<slug:competitor_slug>', views.competitor_detail, name='competitor_detail'),
+    path('eliminated/pdf/', views.eliminated_pdf, name='eliminated_pdf'),
 ]
