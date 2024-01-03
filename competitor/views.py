@@ -1,3 +1,6 @@
+import csv
+import datetime
+
 import weasyprint
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -33,4 +36,22 @@ def eliminated_pdf(request):
     response = HttpResponse(content_type='application/pdf')
     response['Content-Disposition'] = 'filename=eliminated.pdf'
     weasyprint.HTML(string=html).write_pdf(response)
+    return response
+
+
+def competitors_csv(request):
+    competitors = Competitor.objects.all()
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename=competitors.csv'
+    writer = csv.writer(response)
+    headers = [field.name for field in Competitor._meta.get_fields()]
+    writer.writerow(headers)
+    for competitor in competitors:
+        data = []
+        for header in headers:
+            value = getattr(competitor, header)
+            if isinstance(value, datetime.datetime):
+                value = value.strftime('%d%m%Y')
+            data.append(value)
+        writer.writerow(data)
     return response
