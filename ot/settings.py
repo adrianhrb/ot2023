@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'competitor.apps.CompetitorConfig',
     'teacher.apps.TeacherConfig',
     'judge.apps.JudgeConfig',
+    'poll.apps.PollConfig',
     'program.apps.ProgramConfig',
     'easy_thumbnails',
 ]
