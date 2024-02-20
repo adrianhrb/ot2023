@@ -16,6 +16,7 @@ class Competitor(models.Model):
     hobbies = models.CharField(max_length=255, help_text='Add subjects separated with ","')
     avatar = models.ImageField(upload_to='competitor')
     active = models.BooleanField()
+    nominated = models.BooleanField()
     subject = models.ManyToManyField(Subject)
     music_style = models.ManyToManyField(MusicStyle)
 
