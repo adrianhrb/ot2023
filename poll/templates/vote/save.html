@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% load thumbnail %}
+
+{% block title %}Votar | OT2023{% endblock %}
+{% block css %}{% static "css/concursante.css" %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row text-center">
+        <h1>Concursantes:</h1>
+        {% for competitor in nominated  %}
+            <div class="col-6 col-lg-3 img">
+                <a href="#">
+                    <img src="{% thumbnail competitor.avatar 180x180 %}">
+                    <h2>{{ competitor.first_name|upper }} {{ competitor.last_name|upper }}</h2>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
